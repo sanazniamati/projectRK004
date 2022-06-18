@@ -1,37 +1,45 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Stage, Layer, Rect } from "react-konva";
+import { Stage, Layer, Line } from "react-konva";
 
 const App = () => {
   return (
     <Stage width={window.innerWidth} height={window.innerHeight}>
       <Layer>
-        <Rect
-          x={20}
-          y={20}
-          width={100}
-          height={50}
-          fill="green"
-          stroke="black"
-          strokWidth={4}
+        <Line
+          x={0}
+          y={5}
+          points={[5, 70, 140, 23, 250, 60, 300, 20]}
+          stroke={"red"}
+          strokeWidth={15}
+          lineCap={"round"}
+          lineJoin={"round"}
         />
-        <Rect
-          x={150}
-          y={40}
-          width={100}
-          height={50}
-          fill="red"
-          shadowBlur={10}
-          stroke="black"
-          cornerRadius={10}
+        {/*    dashed Line*/}
+        <Line
+          x={0}
+          y={55}
+          points={[5, 70, 140, 23, 250, 60, 300, 20]}
+          stroke={"green"}
+          strokeWidth={2}
+          lineJoin={"round"}
+          dash={[33, 10]}
         />
-        <Rect
-          x={50}
-          y={120}
-          width={100}
-          height={100}
-          fill="blue"
-          cornerRadius={[0, 10, 20, 30]}
+        {/*  complex dashed and dotted line */}
+        <Line
+          x={0}
+          y={105}
+          points={[5, 70, 140, 23, 250, 60, 300, 20]}
+          stroke={"blue"}
+          strokeWidth={10}
+          lineCap={"round"}
+          lineJoin={"round"}
+          dash={[29, 20, 0.001, 20]}
+          /*
+           * line segments with a length of 29px with a gap
+           * of 20px followed by a line segment of 0.001px (a dot)
+           * followed by a gap of 20px
+           */
         />
       </Layer>
     </Stage>

@@ -1,11 +1,12 @@
 {
-  "name": "projectrk002",
+  "name": "projectrk004",
   "version": "0.1.0",
   "private": true,
+  "description": "create simple line",
   "keywords": [
     "react-konva",
     "react",
-    "Rect"
+    "Line"
   ],
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
