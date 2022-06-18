@@ -1,1 +1,1 @@
-![Line](./Line.PNG)
+![Line](./Line.png)
