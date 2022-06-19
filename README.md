@@ -9,4 +9,4 @@ It provides declarative and reactive bindings to the [Konva Framework](https://k
 
 ![Simple Lines](./Line.png)
 
-**How to create defrent Lines?**
+**How to create different Lines?**
